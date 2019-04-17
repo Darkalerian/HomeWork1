@@ -13,7 +13,7 @@ public class HomePageTest {
     public void checkCategory() throws InterruptedException {
 
 
-        System.setProperty("webdriver.chrome.driver", "C:/Users/wowa/Desktop/Java/HomeWork1/src/main/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", ".\\src\\main\\resources\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get(Constant.HOMEPAGE_URL);
         Assert.assertEquals(driver.getTitle(), "My Store");

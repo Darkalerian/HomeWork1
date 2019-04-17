@@ -12,6 +12,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AddItemToCardTest {
@@ -41,11 +42,10 @@ public class AddItemToCardTest {
         HomePage.linkCategory().click();
         CategoryPage.linkItem().click();
         ItemPage.linkAddToCard().click();
-        //waitButton.until(ExpectedConditions.presenceOfElementLocated(ElementsSelectors.PROCEED_TO_CHECKOUT_BUTTON));
-        Thread.sleep(2000);
+        waitButton.until(ExpectedConditions.visibilityOf(ItemPage.linkProceedeToCheckout()));
         ItemPage.linkProceedeToCheckout().click();
         Assert.assertEquals(driver.findElement(ElementsSelectors.CARD_TABLE_ITEMNAME_CELL).getText(), "Faded Short Sleeve T-shirts");
-        Thread.sleep(5000);
+        Thread.sleep(2000);
 
     }
 }
