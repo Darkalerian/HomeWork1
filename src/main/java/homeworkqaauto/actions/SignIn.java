@@ -1,9 +1,8 @@
-package com.homeworkqaauto.actions;
+package homeworkqaauto.actions;
 
-import com.homeworkqaauto.pages.HomePage;
-import com.homeworkqaauto.pages.LoginPage;
-import com.homeworkqaauto.utils.Constant;
-import com.homeworkqaauto.utils.ExcelDataStorage;
+import homeworkqaauto.pages.HomePage;
+import homeworkqaauto.pages.LoginPage;
+//import homeworkqaauto.utils.ExcelDataStorage;
 import org.openqa.selenium.WebDriver;
 
 public class SignIn {

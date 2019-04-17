@@ -1,4 +1,4 @@
-package com.homeworkqaauto.utils;
+package homeworkqaauto.utils;
 
 public interface Constant {
     String HOMEPAGE_URL = "http://automationpractice.com";

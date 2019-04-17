@@ -1,17 +1,18 @@
-package com.homeworkqaauto.testcases;
+package tests;
 
-import homeworkqaauto.pages.BasePage;
 import homeworkqaauto.pages.CategoryPage;
 import homeworkqaauto.pages.HomePage;
 import homeworkqaauto.pages.ItemPage;
 import homeworkqaauto.utils.Constant;
+import homeworkqaauto.utils.DriversList;
+import homeworkqaauto.utils.DriversCreator;
 import homeworkqaauto.utils.ElementsSelectors;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AddItemToCardTest {
@@ -20,10 +21,7 @@ public class AddItemToCardTest {
 
     @BeforeClass
     public static void  init(){
-        System.setProperty("webdriver.chrome.driver", ".\\src\\main\\resources\\chromedriver.exe");
-        driver = new ChromeDriver();
-        BasePage.driver = driver;
-        driver.get(Constant.HOMEPAGE_URL);
+        driver = DriversCreator.getBrowserInstance(DriversList.CHROME,Constant.HOMEPAGE_URL);
         waitButton = new WebDriverWait(driver,10);
 
     }
@@ -41,11 +39,10 @@ public class AddItemToCardTest {
         HomePage.linkCategory().click();
         CategoryPage.linkItem().click();
         ItemPage.linkAddToCard().click();
-        //waitButton.until(ExpectedConditions.presenceOfElementLocated(ElementsSelectors.PROCEED_TO_CHECKOUT_BUTTON));
-        Thread.sleep(2000);
+        waitButton.until(ExpectedConditions.visibilityOf(ItemPage.linkProceedeToCheckout()));
         ItemPage.linkProceedeToCheckout().click();
         Assert.assertEquals(driver.findElement(ElementsSelectors.CARD_TABLE_ITEMNAME_CELL).getText(), "Faded Short Sleeve T-shirts");
-        Thread.sleep(5000);
+        Thread.sleep(2000);
 
     }
 }

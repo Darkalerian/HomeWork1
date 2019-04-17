@@ -1,6 +1,6 @@
-package com.homeworkqaauto.pages;
+package homeworkqaauto.pages;
 
-import com.homeworkqaauto.utils.ElementsSelectors;
+import homeworkqaauto.utils.ElementsSelectors;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 

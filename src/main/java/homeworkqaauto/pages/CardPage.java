@@ -1,11 +1,10 @@
-package com.homeworkqaauto.pages;
+package homeworkqaauto.pages;
 
-import com.homeworkqaauto.utils.ElementsSelectors;
-import org.openqa.selenium.By;
+import homeworkqaauto.utils.ElementsSelectors;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class CardPage extends BasePage {
+public class CardPage extends BasePage  {
 
     public CardPage(WebDriver driver) {
         super(driver);

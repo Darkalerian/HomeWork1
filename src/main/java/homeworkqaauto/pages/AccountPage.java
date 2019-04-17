@@ -1,4 +1,4 @@
-package com.homeworkqaauto.pages;
+package homeworkqaauto.pages;
 
 import org.openqa.selenium.WebDriver;
 

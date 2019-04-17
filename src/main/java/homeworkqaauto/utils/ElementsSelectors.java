@@ -1,4 +1,4 @@
-package com.homeworkqaauto.utils;
+package homeworkqaauto.utils;
 
 import org.openqa.selenium.By;
 

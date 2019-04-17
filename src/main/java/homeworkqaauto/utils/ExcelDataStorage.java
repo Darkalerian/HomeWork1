@@ -1,4 +1,4 @@
-package com.homeworkqaauto.utils;
+package homeworkqaauto.utils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
